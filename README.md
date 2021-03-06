@@ -6,6 +6,12 @@ Bundled and compiled using snowpack and deployed to vercel.
 
 [Preview site](https://colour-picker-six.vercel.app/)
 
+# Performance
+
+Uses the GPU to render transforms and uses translate for pointer movement. A combination of this provides a stable 60fps on most machines!
+
+![performance](./performance.png)
+
 # Testing
 
 Run `yarn test`
