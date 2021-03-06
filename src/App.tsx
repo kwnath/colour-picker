@@ -1,38 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import 'tailwindcss/dist/base.css';
+import { ColourPicker } from './components/ColourPicker/ColourPicker';
+import 'tailwindcss/dist/tailwind.css';
+import { SubText } from '@components/Text/Text';
 
 interface AppProps {}
 
 function App({}: AppProps) {
-  // Create the count state.
-  const [count, setCount] = useState(0);
-  // Create the counter (+1 every second).
-  useEffect(() => {
-    const timer = setTimeout(() => setCount(count + 1), 1000);
-    return () => clearTimeout(timer);
-  }, [count, setCount]);
-  // Return the App component.
+  const [hex, setHex] = useState('');
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <p>
-          Page has been open for <code>{count}</code> seconds.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
+        <ColourPicker onChange={setHex} />
+        <div className="block mt-3 px-2 text-left">
+          <SubText className="font-medium inline-block mr-3">HEX</SubText>
+          {/* Fixed width so when hex values change they don't change the width of the "input" */}
+          <div className="inline-block py-2 text-center border rounded border-gray-300 w-24">
+            {hex}
+          </div>
+        </div>
       </header>
     </div>
   );
