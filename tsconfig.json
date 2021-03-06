@@ -1,6 +1,7 @@
 {
-  "include": ["src", "types/*.d.ts"],
+  "include": ["src", "types/*.d.ts", "types/globals.d.ts"],
   "compilerOptions": {
+    "esModuleInterop": true,
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "node",
