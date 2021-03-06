@@ -49,6 +49,8 @@ export const SaturationPicker: React.FC<SaturationPickerProps> = ({
     };
     setHsva(hsvaVals);
     onChange && onChange(hsvaVals);
+
+    return () => {};
   }, [coordinates[0], coordinates[1], hue]);
 
   return (

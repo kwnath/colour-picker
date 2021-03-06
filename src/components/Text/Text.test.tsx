@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { SubText } from './Text';
 import React from 'react';
-import { expect, should } from 'chai';
+import { should } from 'chai';
 
 describe('SubText', () => {
   it('should display the text', () => {
