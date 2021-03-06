@@ -12,7 +12,6 @@ function App({}: AppProps) {
   return (
     <div className="App">
       <header className="App-header">
-        <div>hello</div>
         <ColourPicker onChange={setHex} />
         <div className="block mt-3 px-2 text-left">
           <SubText className="font-medium inline-block mr-3">HEX</SubText>
