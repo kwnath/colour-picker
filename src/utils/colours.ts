@@ -61,6 +61,12 @@ export interface HsvaColour extends HsvColour {
   a: number;
 }
 
+/**
+ *
+ * Hue
+ * Saturation
+ * Value
+ */
 export const hsvaToHsla = ({ h, s, v, a }: HsvaColour): HslaColour => {
   const hh = ((200 - s) * v) / 100;
 
@@ -81,6 +87,12 @@ export const hsvaToHslString = (hsva: HsvaColour): string => {
   return `hsl(${h}, ${s}%, ${l}%)`;
 };
 
+/**
+ *
+ * First needs to be converted into rgba, then converting to hex is simple
+ *
+ * {Red}{Green}{Blue}
+ */
 export const hsvaToHex = (hsva: HsvaColour): string =>
   rgbaToHex(hsvaToRgba(hsva));
 
