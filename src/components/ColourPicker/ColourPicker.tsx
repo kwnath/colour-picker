@@ -22,7 +22,7 @@ export const ColourPicker: React.FC<ColourPickerProps> = ({ onChange }) => {
      * Ideally you would make this fit the outer container or have predefined sizes
      */
     <div
-      className="grid grid-flow-col gap-5 h-32 w-64"
+      className="grid grid-flow-col gap-5 h-52 w-64"
       style={{
         gridAutoColumns: '1fr min-content',
       }}
