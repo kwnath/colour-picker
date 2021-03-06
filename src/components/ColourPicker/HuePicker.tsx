@@ -6,18 +6,19 @@ import tw, { css, styled } from 'twin.macro';
 import { Pointer, POINTER_RADIUS } from './Pointer';
 
 export const HueContainer = styled.div(() => [
-  tw`rounded-md border border-gray-200`,
+  tw`rounded-md border border-gray-300`,
   css`
     position: relative;
     height: 100%;
     width: 26px;
+
     background: linear-gradient(
       red 0,
-      #ff0 17%,
-      #0f0 33%,
+      #f0f 17%,
+      #00f 33%,
       #0ff 50%,
-      #00f 67%,
-      #f0f 83%,
+      #0f0 67%,
+      #ff0 83%,
       red
     );
   `,
@@ -50,7 +51,7 @@ export const HuePicker: React.FC<HuePickerProps> = ({
 
   /** Ideally you'd put this in a debounce or throttle for performance */
   useEffect(() => {
-    const hue = getHueByPercentage(coordinates[1]);
+    const hue = getHueByPercentage(1 - coordinates[1]);
     setHex(
       hslToHex({
         h: hue,
