@@ -1,6 +1,6 @@
 # Colour picker
 
-A colour picker written in react and typescript.
+A simple and performant colour picker written in react and typescript that utilises the gpu for efficient renders.
 
 Bundled and compiled using snowpack and deployed to vercel.
 
